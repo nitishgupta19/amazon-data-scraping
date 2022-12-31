@@ -9,3 +9,8 @@ Steps To run the project
 
 4. node scraping.js
 
+Used Package 
+
+    "axios": "^1.2.2",
+    "cheerio": "^1.0.0-rc.12",
+    "mongodb": "^4.13.0"
