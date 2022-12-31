@@ -9,14 +9,6 @@ async function insertData(doc) {
     try {
         const database = client.db("amazon-product");
         const productData = database.collection("product-data");
-        const dummyData = {
-            B00I88VXWU: {
-                'amazon-id': 'B00I88VXWU',
-                title: 'Urban Classics Ladies - 3/4 RAGLAN Longsleeve grey',
-                thumbnail: 'https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/71oLb+Ij3fL._AC_UL320_.jpg',
-                price: 30,
-            }
-        }
         console.log(doc)
         const result = await productData.insertOne(doc);
         console.log(result);
@@ -38,7 +30,7 @@ async function scrappingData(url) {
     try {
 
         do {
-            console.log(pageIndex)
+            // console.log(pageIndex)
             const data = await getCurrentPageData(pageIndex);
             if (pageIndex === 1) {
                 totalProduct = getTotalProduct(data)
@@ -48,8 +40,8 @@ async function scrappingData(url) {
             // console.log(productIds.length);
             if (productIds.length) {
                 productAlreadyScrapped += productIds.length;
-                console.log("productAlreadyScrapped", productAlreadyScrapped);
-                console.log("totalProduct", totalProduct)
+                // console.log("productAlreadyScrapped", productAlreadyScrapped);
+                // console.log("totalProduct", totalProduct)
                 alreadyScrappedProducts = Object.assign(currentPageProducts, alreadyScrappedProducts);
             }
             pageIndex++;
