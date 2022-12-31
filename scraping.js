@@ -2,7 +2,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
-const uri = "mongodb+srv://nitishGuptaDeveloper:qokhVQqHOyHnUpVe@cluster0.9s4hhmu.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://nitishGuptaDeveloper:<password>@cluster0.9s4hhmu.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 async function insertData(doc) {
