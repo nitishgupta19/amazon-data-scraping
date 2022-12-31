@@ -1,4 +1,6 @@
 # amazon-data-scraping
+Node version : Node: 14.21.1
+
 Steps To run the project
 
 1. Clone repository 
